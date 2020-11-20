@@ -16,6 +16,7 @@ class Product(models.Model):
     product_description = models.CharField(max_length=300)
     created_at = models.DateTimeField(auto_now_add=True)
     image = models.ImageField(upload_to='category/%Y/%m/%d', blank=True)
+    price = models.IntegerField()
 
     def __str__(self):
         return self.product
